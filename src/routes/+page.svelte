@@ -1,10 +1,13 @@
 <script lang="ts">
-	import PinPad from './KeyPad.svelte';
+	import KeyPad from './KeyPad.svelte';
 
 	let L;
 	let R;
 	let O;
 	let P;
+
+	let candidates = [];
+	let non_candidates = [];
 	function rand_digit(): number {
 		return(Math.floor(Math.random()*10))
 	}
@@ -44,7 +47,7 @@
 </svelte:head>
 
 <section>
-	<PinPad />
+	<KeyPad key_colors={new Uint8Array([1,1,1,0,1,0,0,0,0,1])} training_board={false}/>
 </section>
 
 <style>
