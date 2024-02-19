@@ -25,13 +25,13 @@
 	<button class="key digit" id="key8" style="background-color:{color[key_colors[8]]}">8</button>
 	<button class="key digit" id="key9" style="background-color:{color[key_colors[9]]}">9</button>
 	{#if training_board}
-	<button class="key color_key" id="key_black" on:click={() => forwardBW(0)} style="background-color:{color[0]}">Tap here if your digit is Black</button>
+	<button class="key color_key" id="key_black" on:click={() => forwardBW(0)} style="background-color:{color[0]}">My Digit is Black</button>
 	{:else}
 	<button class="key color_key" id="key_black" on:click={() => forwardBW(0)} style="background-color:{color[0]}">+</button>
 	{/if}
 	<button class="key digit" id="key0" style="background-color:{color[key_colors[0]]}">0</button>
 	{#if training_board}
-	<button class="key color_key" id="key_white" on:click={() => forwardBW(1)} style="background-color:{color[1]}">Tap here if your digit is White</button>
+	<button class="key color_key" id="key_white" on:click={() => forwardBW(1)} style="background-color:{color[1]}">My Digit is White</button>
 	{:else}
 	<button class="key color_key" id="key_white" on:click={() => forwardBW(1)} style="background-color:{color[1]}">+</button>
 	{/if}

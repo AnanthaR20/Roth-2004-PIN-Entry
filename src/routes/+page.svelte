@@ -126,7 +126,7 @@
 	{/if}
 	{#if show_keypad_screen}
 		<h1>Tap the color of your <strong><u>{gameHeader(rounds)} digit</u></strong> for <strong>{4-(rounds % 4)}</strong> more rounds.</h1>
-		<KeyPad key_colors={displayDigits} training_board={false} on:BW_input={play_a_round}/>
+		<KeyPad key_colors={displayDigits} training_board={true} on:BW_input={play_a_round}/>
 	{/if}
 	{#if show_end_screen}
 		<EndPage PIN = {userEnteredPIN} />
