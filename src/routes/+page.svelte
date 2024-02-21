@@ -1,7 +1,7 @@
 <script lang="ts">
-	import StartPage from './StartPage.svelte';
+	// import StartPage from './StartPage.svelte';
 	import KeyPad from './KeyPad.svelte';
-	import EndPage from './EndPage.svelte';
+	// import EndPage from './EndPage.svelte';
 	import type { CreateInstanceResponse, UpdateInstanceResponse, GetPointsResponse } from './logic';
 
 	// Game Initial Values
@@ -85,12 +85,12 @@
 	function setNextRoundKeyPadColoring() {
 		let LR = cutInHalf(shuffle(candidates));
 		let L = LR[0];
-		let R = LR[1];
+		// let R = LR[1];
 		let OP = cutInHalf(shuffle(non_candidates));
-		let O = OP[0];
+		// let O = OP[0];
 		let P = OP[1];
 		let L_display = L.concat(P);
-		let R_display = R.concat(O);
+		// let R_display = R.concat(O);
 
 		displayDigits = convertToDisplayDigits(L_display);
 	}
@@ -268,6 +268,7 @@
 		{/if}
 		<br />
 		<button on:click={progress_transition}>Start Game</button>
+		<!-- <StartPage on:click={() => startGame()}/> -->
 	{/if}
 	{#if show_keypad_screen}
 		<h1>
@@ -305,6 +306,7 @@
 		<button on:click={reset}>Play Again</button>
 		<br />
 		<button><a href="https://142.93.219.243.nip.io/">Checkout Other Games</a></button>
+		<!-- <EndPage PIN={userEnteredPIN}/> -->
 	{/if}
 </section>
 
