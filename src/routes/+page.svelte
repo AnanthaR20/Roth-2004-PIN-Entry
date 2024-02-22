@@ -271,9 +271,9 @@
 		<!-- <StartPage on:click={() => startGame()}/> -->
 	{/if}
 	{#if show_keypad_screen}
-		<h1><strong><u>{gameHeader(rounds)} digit:</u></strong> Round {(rounds % 4) + 1}</h1>
+		<h1><strong>{gameHeader(rounds)} digit </strong>| Round {(rounds % 4) + 1}</h1>
 		<KeyPad key_colors={displayDigits} training_board={true} on:BW_input={play_a_round} />
-		<h1>Tap color of your <strong><u>{gameHeader(rounds)} digit</u></strong></h1>
+		<h1 style="font-size:1.5em">Tap the color of the <strong>{gameHeader(rounds)} digit</strong></h1>
 	{/if}
 	{#if show_end_screen}
 		{#if show_pin}
