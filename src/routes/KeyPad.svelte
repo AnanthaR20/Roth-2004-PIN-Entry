@@ -28,7 +28,7 @@
 			class="key color_key"
 			id="key_black"
 			on:click={() => forwardBW(0)}
-			style="background-color:{color[0]}">My Digit is Black</button
+			style="background-color:{color[0]}">Black</button
 		>
 	{:else}
 		<button
@@ -44,7 +44,7 @@
 			class="key color_key"
 			id="key_white"
 			on:click={() => forwardBW(1)}
-			style="background-color:{color[1]}">My Digit is White</button
+			style="background-color:{color[1]}">White</button
 		>
 	{:else}
 		<button
