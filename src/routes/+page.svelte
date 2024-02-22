@@ -3,6 +3,7 @@
 	import KeyPad from './KeyPad.svelte';
 	// import EndPage from './EndPage.svelte';
 	import type { CreateInstanceResponse, UpdateInstanceResponse, GetPointsResponse } from './logic';
+	import banner from '$lib/images/Banners_Shadow_Pin_Entry.png';
 
 	// Game Initial Values
 	let show_start_screen = true;
@@ -242,6 +243,8 @@
 
 <section>
 	{#if show_start_screen}
+		<img src={banner} alt="Shadow PIN Entry" width="100%" height="30%" />
+		<br />
 		<input
 			type="text"
 			placeholder="User ID"
@@ -273,9 +276,13 @@
 	{#if show_keypad_screen}
 		<h1><strong>{gameHeader(rounds)} digit </strong>| Round {(rounds % 4) + 1}</h1>
 		<KeyPad key_colors={displayDigits} training_board={true} on:BW_input={play_a_round} />
-		<h1 style="font-size:1.5em">Tap the color of the <strong>{gameHeader(rounds)} digit</strong></h1>
+		<h1 style="font-size:1.5em">
+			Tap the color of the <strong>{gameHeader(rounds)} digit</strong>
+		</h1>
 	{/if}
 	{#if show_end_screen}
+		<img src={banner} alt="Shadow PIN Entry" width="100%" height="30%" />
+		<br />
 		{#if show_pin}
 			<div>Entered PIN: {userEnteredPIN}</div>
 		{/if}
