@@ -8,9 +8,11 @@
 	//         text:"Started Game"
 	//     })
 	// }
+	import banner from '$lib/images/Banners_Shadow_Pin_Entry.png';
 </script>
 
-<h1>Black and White PIN Entry</h1>
+<!-- <h1>Black and White PIN Entry</h1> -->
+<img src={banner} alt="Shadow PIN Entry" width="100%" height="30%"/>
 
 <buton id="start" on:click>Start Game!</buton>
 
