@@ -1,7 +1,7 @@
 <script lang="ts">
-	// import StartPage from './StartPage.svelte';
+	import StartPage from './StartPage.svelte';
 	import KeyPad from './KeyPad.svelte';
-	// import EndPage from './EndPage.svelte';
+	import EndPage from './EndPage.svelte';
 	import type { CreateInstanceResponse, UpdateInstanceResponse, GetPointsResponse } from './logic';
 	import banner from '$lib/images/Banners_Shadow_Pin_Entry.png';
 
@@ -212,28 +212,30 @@
 	}
 
 	function finish_transition() {
-		const url = 'https://142.93.219.243.nip.io/update_instance';
-		const data = {
-			iid_value: iid,
-			result_pin: userEnteredPIN
-		};
-		const request = new Request(url, {
-			method: 'POST',
-			body: JSON.stringify(data),
-			headers: new Headers({
-				'Content-Type': 'application/json; charset=UTF-8'
-			})
-		});
-		fetch(request).then((instance_response_value_temp) => {
-			instance_response_value_temp.json().then((temp) => {
-				const instance_response_value = <UpdateInstanceResponse>(<unknown>temp);
-				if (iid !== instance_response_value.iid) {
-					alert('Reached invalid state, please report bug!');
-				}
-				show_end_screen = true;
-				show_keypad_screen = false;
-			});
-		});
+		// const url = 'https://142.93.219.243.nip.io/update_instance';
+		// const data = {
+		// 	iid_value: iid,
+		// 	result_pin: userEnteredPIN
+		// };
+		// const request = new Request(url, {
+		// 	method: 'POST',
+		// 	body: JSON.stringify(data),
+		// 	headers: new Headers({
+		// 		'Content-Type': 'application/json; charset=UTF-8'
+		// 	})
+		// });
+		// fetch(request).then((instance_response_value_temp) => {
+		// 	instance_response_value_temp.json().then((temp) => {
+		// 		const instance_response_value = <UpdateInstanceResponse>(<unknown>temp);
+		// 		if (iid !== instance_response_value.iid) {
+		// 			alert('Reached invalid state, please report bug!');
+		// 		}
+		// 		show_end_screen = true;
+		// 		show_keypad_screen = false;
+		// 	});
+		// });
+		show_end_screen = true;
+		show_keypad_screen = false;
 	}
 </script>
 
@@ -244,7 +246,7 @@
 
 <section>
 	{#if show_start_screen}
-		<img src={banner} alt="Shadow PIN Entry" width="100%" height="30%" />
+		<!-- <img src={banner} alt="Shadow PIN Entry" width="100%" height="30%" />
 		<br />
 		<input
 			type="text"
@@ -271,8 +273,8 @@
 			{/await}
 		{/if}
 		<br />
-		<button on:click={progress_transition}>Start Game</button>
-		<!-- <StartPage on:click={() => startGame()}/> -->
+		<button on:click={progress_transition}>Start Game</button> -->
+		<StartPage on:click={() => startGame()}/>
 	{/if}
 	{#if show_keypad_screen}
 		<h1><strong>{gameHeader(rounds)} digit </strong>| Round {(rounds % 4) + 1}</h1>
@@ -282,7 +284,7 @@
 		</h1>
 	{/if}
 	{#if show_end_screen}
-		<img src={banner} alt="Shadow PIN Entry" width="100%" height="30%" />
+		<!-- <img src={banner} alt="Shadow PIN Entry" width="100%" height="30%" />
 		<br />
 		{#if show_pin}
 			<div>Entered PIN: {userEnteredPIN}</div>
@@ -311,8 +313,8 @@
 		<br />
 		<button on:click={reset}>Play Again</button>
 		<br />
-		<button><a href="https://142.93.219.243.nip.io/">Checkout Other Games</a></button>
-		<!-- <EndPage PIN={userEnteredPIN}/> -->
+		<button><a href="https://142.93.219.243.nip.io/">Checkout Other Games</a></button> -->
+		<EndPage PIN={userEnteredPIN}/>
 	{/if}
 </section>
 
