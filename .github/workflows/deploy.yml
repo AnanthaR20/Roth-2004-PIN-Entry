@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: 'master'
+    branches: '1-make-game-demo-able'
 
 jobs:
   build_site:
