@@ -1,38 +1,34 @@
-# create-svelte
+# Roth-2004-PIN-Entry
+You can **demo** this Password entry method [HERE](https://ananthar20.github.io/Roth-2004-PIN-Entry/)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This is a minimal re-implementation of a PIN entry method designed by Roth et al(2004). It is intended as a way to input a 4 digit password so that
+an adversarial on-looker (someone snooping over your shoulder) would find it difficult to figure out your password just from watching your inputs.
 
-## Creating a project
+# To use the Demo
 
-If you're seeing this, you've probably already done this step. Congrats!
+Pick any 4 digits you'd like to be your password (could be '1234' for example).
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+1. Press 'Start Game'
+You will see a keypad with the digits colored randomly black or white.
+You will also see two buttons named 'Black' and 'White' in the grid.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+2. Starting with your 1st digit, indicate whether it is black or white. You will do this 4 times for your first digit
+Each time your press the 'Black' or 'White' button, the colors will be shuffled.
 
-## Developing
+3. Repeat this process for each digit- indicating 'Black' or 'White' 4 times per digit. Note that you will need to
+re-indicate 'Black' or 'White' for the same digit each time the keypad colors are shuffled (until you've made a color judgement 4 times for the current digit)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+4. At the end, press 'Toggle PIN Visibility' to see the 4 digit PIN that you entered. Hopefully it matches the one you
+selected at the beginning. If it does not, you may have made a mistake in entering your PIN. On the end screen, if you see 
+a "#" sign in the entered PIN, this means the color selections you've made do not subset any of the digits in the color configurations of the round 
+you just played (i.e. You may have made a mistake while entering your PIN)
 
-```bash
-npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+# Motivation behind Trapdoor Games
 
-## Building
+For fun, ask a friend to watch you play (on your phone or computer). Explain the rule to them, and see
+if they can guess your 'password' by watching you input your digits. 
 
-To create a production version of your app:
+This type of PIN Entry method has potential applications for phone-entered passwords, ATM Machines, or Point-of-Sale devices where
+you may have somebody looking over your shoulder to try to see private passwords.
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
