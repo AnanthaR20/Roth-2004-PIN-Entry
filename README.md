@@ -6,7 +6,7 @@ an adversarial on-looker (someone snooping over your shoulder) would find it dif
 
 # To use the Demo
 
-Pick any 4 digits you'd like to be your password (could be '1234' for example).
+Pick any 4 digits you'd like to be your password (could be any 4 numbers you'd like).
 
 1. Press 'Start Game'
 You will see a keypad with the digits colored randomly black or white.
@@ -23,11 +23,18 @@ selected at the beginning. If it does not, you may have made a mistake in enteri
 a "#" sign in the entered PIN, this means the color selections you've made do not subset any of the digits in the color configurations of the round 
 you just played (i.e. You may have made a mistake while entering your PIN)
 
+# Example Play Through
+
+Say you want to input the PIN '2376'
+
+Press 'Start Game'. Then indicate the color of the first digit (which is '2') four times. Then indicate the color of '3' four times. Then indicate the color of '7' four times and lastly indicate the color of '6' four times. 
+
+Press 'Toggle PIN Visibility' at the end to see if you entered your password correctly.
 
 # Motivation behind Trapdoor Games
 
-For fun, ask a friend to watch you play (on your phone or computer). Explain the rule to them, and see
-if they can guess your 'password' by watching you input your digits. 
+For fun, ask a friend to watch you play (on your phone or computer). Explain the rules to them, and see
+if they can guess your 'password' by watching you input your digits. Make sure they have a clear view of your screen.
 
 This type of PIN Entry method has potential applications for phone-entered passwords, ATM Machines, or Point-of-Sale devices where
 you may have somebody looking over your shoulder to try to see private passwords.
