@@ -13,7 +13,7 @@
 
 <!-- <h1>Black and White PIN Entry</h1> -->
 <img src={banner} alt="Shadow PIN Entry" width="100%" height="30%"/>
-
+<br>
 <buton id="start" on:click>Start Game!</buton>
 
 <style>
