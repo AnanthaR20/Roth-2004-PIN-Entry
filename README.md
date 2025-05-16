@@ -4,7 +4,7 @@ You can **demo** this Password entry method [HERE](https://ananthar20.github.io/
 This is a minimal re-implementation of a PIN entry method designed by Roth et al(2004). It is intended as a way to input a 4 digit password so that
 an adversarial on-looker (someone snooping over your shoulder) would find it difficult to figure out your password just from watching your inputs.
 
-# How to Input Your PIN (Instructions for the Demo)
+# Instructions for the Demo
 
 Pick any 4 digits you'd like to be your hypothetical password (could be any 4 numbers between 0-9).
 
